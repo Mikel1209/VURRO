@@ -8,6 +8,6 @@ public class INICIO extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_inicio);//WERGAs
+        setContentView(R.layout.activity_inicio);
     }
 }
