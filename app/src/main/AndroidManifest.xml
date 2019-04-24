@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MENU"></activity>
+        <activity android:name=".MENU" />
+        <activity android:name=".Manejar" />
+        <activity android:name=".Manual"></activity>
     </application>
 
 </manifest>
