@@ -8,24 +8,14 @@
     tools:context=".MENU">
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnUsuarios"
         android:layout_width="142dp"
         android:layout_height="67dp"
-        android:text="Button"
         android:background="@drawable/redondear"
+        android:text="USUARIOS"
         android:textColor="@drawable/texto"
         tools:layout_editor_absoluteX="202dp"
         tools:layout_editor_absoluteY="138dp" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="142dp"
-        android:layout_height="67dp"
-        android:text="Button"
-        android:background="@drawable/redondear"
-        android:textColor="@drawable/texto"
-        tools:layout_editor_absoluteX="202dp"
-        tools:layout_editor_absoluteY="265dp" />
 
     <Button
         android:id="@+id/button7"
@@ -38,50 +28,50 @@
         tools:layout_editor_absoluteY="471dp" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btnManual"
         android:layout_width="142dp"
         android:layout_height="67dp"
-        android:text="Button"
         android:background="@drawable/redondear"
+        android:text="MANUAL"
         android:textColor="@drawable/texto"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="265dp" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnCajas"
         android:layout_width="142dp"
         android:layout_height="67dp"
-        android:text="Button"
         android:background="@drawable/redondear"
+        android:text="ABRIR/CERRAR  CAJAS"
         android:textColor="@drawable/texto"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="138dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnManejo"
         android:layout_width="142dp"
         android:layout_height="67dp"
-        android:text="Button"
         android:background="@drawable/redondear"
+        android:text="MANEJO"
         android:textColor="@drawable/texto"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="16dp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnRutas"
         android:layout_width="142dp"
         android:layout_height="67dp"
-        android:text="Button"
-        android:textColor="@drawable/texto"
         android:background="@drawable/redondear"
+        android:text="Rutas"
+        android:textColor="@drawable/texto"
         tools:layout_editor_absoluteX="202dp"
         tools:layout_editor_absoluteY="16dp" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="247dp"
-        android:layout_height="308dp"
+        android:layout_width="249dp"
+        android:layout_height="282dp"
         app:srcCompat="@drawable/logo"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="284dp" />
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="303dp" />
 </android.support.constraint.ConstraintLayout>
