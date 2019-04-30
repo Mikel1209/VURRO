@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 import OpenHelper.SQLite_OpenHelper;
 
 public class INICIO extends AppCompatActivity {
@@ -38,13 +40,13 @@ SQLite_OpenHelper helper=new SQLite_OpenHelper(this, "BD1",null,1);
             public void onClick(View v) {
                 EditText txteUsuario = (EditText) findViewById(R.id.txteUsuario);
                 EditText txteContraseña = (EditText) findViewById(R.id.txteContraseña);
-                try {
+                /*try {
                     Cursor cursor = helper.ConsultarUsuPas(txteUsuario.getText().toString(), txteContraseña.getText().toString());
                     if(cursor.getCount()>0){
                         Intent i= new Intent(getApplicationContext(),MENU.class);
                         startActivity(i);
                     }else {
-                        Toast toast1 =Toast.makeText(getApplicationContext(),"Usuario y/o Contraseña incorrectos",Toast.LENGTH_SHORT);
+                        Toast toast1 =
                         toast1.show();
                     }
 txteContraseña.setText("");
@@ -52,7 +54,17 @@ txteContraseña.setText("");
                     txteUsuario.findFocus();
                 } catch (SQLException e) {
                     e.printStackTrace();
+                }*/
+
+                ArrayList<String> datos = helper.getUserPrefs(txteUsuario.getText().toString(), txteContraseña.getText().toString());
+                if (datos.isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Usuario y/o Contraseña incorrectos", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(INICIO.this, "Usuario encontrado", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(getApplicationContext(), MENU.class);
+                    startActivity(i);
                 }
+
             }
 
         });

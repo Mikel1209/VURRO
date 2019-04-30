@@ -7,8 +7,11 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
+
 public class SQLite_OpenHelper extends SQLiteOpenHelper {
 
+    private static SQLiteDatabase db;
 
     public SQLite_OpenHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
@@ -16,7 +19,7 @@ public class SQLite_OpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-      String query="create table usuarios(_ID integer primary key autoincrement, Usuario text, Password text);";
+        String query = "create table if not exists usuarios(_ID integer primary key autoincrement, Usuario text, Password text);";
       db.execSQL(query);
     }
 
@@ -38,13 +41,31 @@ public class SQLite_OpenHelper extends SQLiteOpenHelper {
         this.getWritableDatabase().insert("usuarios",null,valores);
     }
     //Metodo que permite validar si el usuario existe
-    public Cursor ConsultarUsuPas(String usu,String pas)throws SQLException{
-        Cursor mcursor=null;
-        mcursor=this.getReadableDatabase().query("Usuario",new String[]{"_ID","Usuario","Password"},"Usuario like'"+usu+"' "+" and Password like '"+pas+"'",null,null,null,null  );
 
-        return mcursor;
-
+    private Cursor getDataUsr(String usr, String pwd) {
+        db = this.getReadableDatabase();
+        Cursor res;
+        res = db.rawQuery("SELECT Usuario, Password FROM usuarios WHERE Usuario = '" + usr + "' AND Password = '" + pwd + "'", null);
+        return res;
     }
+
+    public ArrayList<String> getUserPrefs(String usr, String pwd) {
+        Cursor res = getDataUsr(usr, pwd);
+        ArrayList<String> credenciales = new ArrayList<>();
+
+        res.moveToFirst();
+
+        while (!res.isAfterLast()) {
+            credenciales.add(res.getString(res.getColumnIndex("Usuario")));
+            credenciales.add(res.getString(res.getColumnIndex("Password")));
+            res.moveToNext();
+        }
+
+        db.close();
+
+        return credenciales;
+    }
+
 
 }
 

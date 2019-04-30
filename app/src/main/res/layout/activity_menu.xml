@@ -11,77 +11,113 @@
         android:id="@+id/btnConectar"
         android:layout_width="142dp"
         android:layout_height="67dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:background="@drawable/redondear"
         android:text="Conectar Bluetooth"
         android:textColor="@drawable/texto"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintEnd_toStartOf="@+id/btnManejo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnManejo"
         android:layout_width="142dp"
         android:layout_height="67dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:background="@drawable/redondear"
         android:text="MANEJO"
         android:textColor="@drawable/texto"
-        tools:layout_editor_absoluteX="202dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnCajas"
         android:layout_width="142dp"
         android:layout_height="67dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/redondear"
         android:text="ABRIR/CERRAR  CAJAS"
         android:textColor="@drawable/texto"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="138dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConectar" />
 
     <Button
         android:id="@+id/btnRutas"
         android:layout_width="142dp"
         android:layout_height="67dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:background="@drawable/redondear"
         android:text="Rutas"
         android:textColor="@drawable/texto"
-        tools:layout_editor_absoluteX="202dp"
-        tools:layout_editor_absoluteY="138dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btnCajas"
+        app:layout_constraintTop_toBottomOf="@+id/btnManejo" />
 
     <Button
         android:id="@+id/btnManual"
         android:layout_width="142dp"
         android:layout_height="67dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:background="@drawable/redondear"
         android:text="MANUAL"
         android:textColor="@drawable/texto"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="265dp" />
+        app:layout_constraintEnd_toStartOf="@+id/btnUsuarios"
+        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCajas" />
 
     <Button
         android:id="@+id/btnUsuarios"
         android:layout_width="142dp"
         android:layout_height="67dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:background="@drawable/redondear"
         android:text="USUARIOS"
         android:textColor="@drawable/texto"
-        tools:layout_editor_absoluteX="202dp"
-        tools:layout_editor_absoluteY="265dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRutas" />
 
     <Button
         android:id="@+id/btnInfo"
-        android:layout_width="142dp"
-        android:layout_height="67dp"
+        android:layout_width="96dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/redondear"
         android:text="Info"
         android:textColor="@drawable/texto"
-        tools:layout_editor_absoluteX="217dp"
-        tools:layout_editor_absoluteY="471dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="249dp"
-        android:layout_height="282dp"
-        app:srcCompat="@drawable/logo"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="303dp" />
+        android:layout_width="273dp"
+        android:layout_height="253dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/logo" />
 </android.support.constraint.ConstraintLayout>

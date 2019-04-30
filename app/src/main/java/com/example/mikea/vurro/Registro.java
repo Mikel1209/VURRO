@@ -28,7 +28,7 @@ public class Registro extends AppCompatActivity {
         btnRegis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int nom=1;
+
                 helper.abrir();
                 helper.insertarRG(txtUsuario.getText().toString(),
                         txtContraseña.getText().toString());
