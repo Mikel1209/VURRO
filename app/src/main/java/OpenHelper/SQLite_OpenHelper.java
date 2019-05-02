@@ -19,7 +19,7 @@ public class SQLite_OpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String query = "create table if not exists usuarios(_ID integer primary key autoincrement, Usuario text, Password text);";
+        String query = "create table if not exists usuarios(_ID integer primary key autoincrement,Usuario text   not null , Password text not null  );";
       db.execSQL(query);
     }
 

@@ -7,14 +7,4 @@
     android:background="@drawable/cecyt_8"
     tools:context=".Manejar">
 
-    <Button
-        android:id="@+id/btnManejo3"
-        android:layout_width="105dp"
-        android:layout_height="46dp"
-        android:background="@drawable/redondear"
-        android:text="MENU"
-        android:textColor="@drawable/texto"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
-
 </android.support.constraint.ConstraintLayout>
