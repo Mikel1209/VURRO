@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.view.View;
 
 public class MENU extends AppCompatActivity {
-    Button btnConectar,btnManejo,btnCajas,btnRutas,btnManual,btnUsuarios,btnInfo;
+    Button btnConectar,btnManejo,btnCajas,btnRutas,btnManual,btnUsuarios;
     Intent i;
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -20,8 +20,10 @@ public class MENU extends AppCompatActivity {
         btnRutas = (Button)findViewById(R.id.btnRutas);
         btnManual= (Button)findViewById(R.id.btnManual);
         btnUsuarios = (Button)findViewById(R.id.btnUsuarios);
-        btnInfo = (Button)findViewById(R.id.btnInfo);
 
+        /*
+            @ Aquí se manda a los activitys correspondientes
+         */
         View.OnClickListener Conectar = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,7 +62,7 @@ public class MENU extends AppCompatActivity {
         View.OnClickListener Rutas = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(getApplicationContext(),INICIO.class);
+                Intent i= new Intent(getApplicationContext(),Rutas.class);
                 startActivity(i);
             }
         };
@@ -75,14 +77,9 @@ public class MENU extends AppCompatActivity {
         };
         btnManual.setOnClickListener(Manual);
 
-        View.OnClickListener Info = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i= new Intent(getApplicationContext(),INICIO.class);
-                startActivity(i);
-            }
-        };
-        btnInfo.setOnClickListener(Info);
+        /*
+            @Aquí acaba de mandar a los activitys correspondientes
+         */
 
     }
 
