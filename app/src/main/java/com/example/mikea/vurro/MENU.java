@@ -51,7 +51,7 @@ public class MENU extends AppCompatActivity {
         View.OnClickListener Cajas = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(getApplicationContext(),Registro.class);
+                Intent i= new Intent(getApplicationContext(),Cajas.class);
                 startActivity(i);
             }
         };
