@@ -25,32 +25,33 @@ public class Registro extends AppCompatActivity {
         txtUsuario = (EditText) findViewById(R.id.txtUsuario);
         txtContraseña = (EditText) findViewById(R.id.txtContraseña);
 
-        String user = txtUsuario.getText().toString();
-        String pass = txtContraseña.getText().toString();
 
 
-        if (user.equals("") || pass.equals("") )
+
+        btnRegis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+        if (txtUsuario.getText().toString().equals("") || txtContraseña.getText().toString().equals("") )
         {
 
-            btnRegis.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+
                     txtUsuario.setError("Campo Vacio");
                     txtContraseña.setError("Campo Vacio");
-                    /*Intent o = new Intent(getApplicationContext(), Registro.class);
+                    txtUsuario.setText("");
+                    txtContraseña.setText("");
+            Toast toast1 = Toast.makeText(getApplicationContext(), "Registro Invalido", Toast.LENGTH_SHORT);
+            toast1.show();
+                   /* Intent o = new Intent(getApplicationContext(), Registro.class);
                     startActivity(o);*/
-                }
-            });
+
+
 
 
         }
          else
             {
-                btnRegis.setOnClickListener(new View.OnClickListener()
-                {
-                    @Override
-                    public void onClick(View v)
-                    {
+
 
                         helper.abrir();
                         helper.insertarRG(txtUsuario.getText().toString(),
@@ -62,9 +63,10 @@ public class Registro extends AppCompatActivity {
                         Intent i = new Intent(getApplicationContext(), INICIO.class);
                         startActivity(i);
 
-                    }
-                });
+
             }
+            }
+        });
 
     }
 }

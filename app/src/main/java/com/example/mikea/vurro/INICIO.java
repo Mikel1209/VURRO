@@ -35,6 +35,8 @@ SQLite_OpenHelper helper=new SQLite_OpenHelper(this, "BD1",null,1);
                 startActivity(i);
             }
         });
+
+
         btnInSesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
