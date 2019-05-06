@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtControl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="Control LED"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnEncender"
+        android:layout_width="171dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="87dp"
+        android:text="Encender"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnApagar"
+        android:layout_width="174dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnEncender"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="171dp"
+        android:text="Apagar"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtBufferIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="186dp"
+        android:text="Dato:"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnDesconectar"
+        android:layout_width="161dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="93dp"
+        android:text="Desconectar"
+        android:textStyle="bold" />
+</RelativeLayout>
