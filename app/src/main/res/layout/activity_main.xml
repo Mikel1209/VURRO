@@ -13,7 +13,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
-        android:text="Control LED"
+        android:text="Apertura de cerradura "
         android:textColor="@android:color/background_dark"
         android:textSize="24sp" />
 
@@ -24,7 +24,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="87dp"
-        android:text="Encender"
+        android:text="Abrir"
         android:textStyle="bold" />
 
     <Button
@@ -34,7 +34,7 @@
         android:layout_alignStart="@+id/btnEncender"
         android:layout_alignParentTop="true"
         android:layout_marginTop="171dp"
-        android:text="Apagar"
+        android:text="Cerrar"
         android:textStyle="bold" />
 
     <TextView

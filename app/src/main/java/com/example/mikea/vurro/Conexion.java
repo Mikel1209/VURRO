@@ -35,7 +35,7 @@ public class Conexion extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dispositivos_bt);
+        setContentView(R.layout.nombre_dispositivos);
     }
 
     @Override

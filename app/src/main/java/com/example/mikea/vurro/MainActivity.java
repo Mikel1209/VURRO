@@ -1,6 +1,5 @@
 package com.example.mikea.vurro;
 
-package com.example.mimeg.vurro;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
