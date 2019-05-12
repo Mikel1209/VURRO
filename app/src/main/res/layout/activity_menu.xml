@@ -28,7 +28,7 @@
         android:id="@+id/btnManejo"
         android:layout_width="142dp"
         android:layout_height="67dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:background="@drawable/redondear"
@@ -71,16 +71,12 @@
         android:id="@+id/btnManual"
         android:layout_width="142dp"
         android:layout_height="67dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:background="@drawable/redondear"
         android:text="MANUAL"
         android:textColor="@drawable/texto"
-        app:layout_constraintEnd_toStartOf="@+id/btnUsuarios"
-        app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCajas" />
 
@@ -109,12 +105,13 @@
         app:srcCompat="@drawable/logo" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/imgbinfo"
         android:layout_width="37dp"
         android:layout_height="37dp"
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="30dp"
+        android:background="?android:attr/panelBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/info" />
@@ -126,8 +123,9 @@
         android:layout_marginEnd="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginBottom="20dp"
+        android:background="?android:attr/panelBackground"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+        app:layout_constraintEnd_toStartOf="@+id/imgbinfo"
         app:srcCompat="@drawable/logout" />
 
 </android.support.constraint.ConstraintLayout>

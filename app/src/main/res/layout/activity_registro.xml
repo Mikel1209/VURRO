@@ -39,6 +39,7 @@
         android:hint="Ingresar Contraseña"
         android:inputType="textPassword"
         android:textColor="@color/colorAccent"
+        android:textColorLink="@color/colorPrimaryDark"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,14 +68,16 @@
 
     <Button
         android:id="@+id/btnRegis"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:background="@android:color/darker_gray"
         android:text="Registrar Usuario"
+        android:textColorLink="@android:color/holo_blue_bright"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtContraseña" />
