@@ -21,7 +21,6 @@ public class MENU extends AppCompatActivity {
         btnConectar = (Button)findViewById(R.id.btnConectar);
         btnManejo = (Button)findViewById(R.id.btnManejo);
         btnCajas = (Button)findViewById(R.id.btnCajas);
-        btnRutas = (Button)findViewById(R.id.btnRutas);
         btnManual= (Button)findViewById(R.id.btnManual);
         btnUsuarios = (Button)findViewById(R.id.btnUsuarios);
         imgbinfo=(ImageButton)findViewById(R.id.imgbinfo);
@@ -54,14 +53,7 @@ public class MENU extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        btnRutas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                Intent i= new Intent(getApplicationContext(),Rutas.class);
-                startActivity(i);
-            }
-        });
+
         btnManual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)

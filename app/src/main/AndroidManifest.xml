@@ -54,14 +54,6 @@
                 android:value=".MENU" />
         </activity>
         <activity
-            android:name=".Rutas"
-            android:label="Ruta"
-            android:parentActivityName=".MENU">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MENU" />
-        </activity>
-        <activity
             android:name=".Usuario"
             android:label="Usuarios"
             android:parentActivityName=".MENU">
