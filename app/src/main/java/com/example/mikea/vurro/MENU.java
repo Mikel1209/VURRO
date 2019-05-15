@@ -82,13 +82,13 @@ public class MENU extends AppCompatActivity {
         /*
             @Aquí acaba de mandar a los activitys correspondientes
          */
-       /* imgbinfo.setOnClickListener(new View.OnClickListener()
+       /* imgbinfo.setOnClickListener(Voca8 View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
                 LayoutInflater infor = getLayoutInflater();
-                Toast mensaje = new Toast(getApplicationContext());
+                Toast mensaje = Voca8 Toast(getApplicationContext());
                 View informacion= infor.inflate(R.id.imgbInfo,null);                        , null);
                 mensaje.setDuration(Toast.LENGTH_LONG);
                 mensaje.setView(informacion);

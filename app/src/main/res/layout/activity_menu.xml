@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/cecyt_8"
+    android:background="@drawable/voca8"
     tools:context=".MENU">
 
     <Button
@@ -51,23 +51,6 @@
         app:layout_constraintTop_toBottomOf="@+id/btnConectar" />
 
     <Button
-        android:id="@+id/btnRutas"
-        android:layout_width="142dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:background="@drawable/redondear"
-        android:text="Rutas"
-        android:textColor="@drawable/texto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/btnCajas"
-        app:layout_constraintTop_toBottomOf="@+id/btnManejo" />
-
-    <Button
         android:id="@+id/btnManual"
         android:layout_width="142dp"
         android:layout_height="67dp"
@@ -84,6 +67,8 @@
         android:id="@+id/btnUsuarios"
         android:layout_width="142dp"
         android:layout_height="67dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
@@ -91,7 +76,9 @@
         android:text="USUARIOS"
         android:textColor="@drawable/texto"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRutas" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btnCajas"
+        app:layout_constraintTop_toBottomOf="@+id/btnManejo" />
 
     <ImageView
         android:id="@+id/imageView2"

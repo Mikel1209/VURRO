@@ -42,7 +42,7 @@ public class Registro extends AppCompatActivity {
                     txtContraseña.setText("");
             Toast toast1 = Toast.makeText(getApplicationContext(), "Registro Invalido", Toast.LENGTH_SHORT);
             toast1.show();
-                   /* Intent o = new Intent(getApplicationContext(), Registro.class);
+                   /* Intent o = Voca8 Intent(getApplicationContext(), Registro.class);
                     startActivity(o);*/
 
 

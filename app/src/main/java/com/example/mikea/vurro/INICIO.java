@@ -45,7 +45,7 @@ SQLite_OpenHelper helper=new SQLite_OpenHelper(this, "BD1",null,1);
                 /*try {
                     Cursor cursor = helper.ConsultarUsuPas(txteUsuario.getText().toString(), txteContraseña.getText().toString());
                     if(cursor.getCount()>0){
-                        Intent i= new Intent(getApplicationContext(),MENU.class);
+                        Intent i= Voca8 Intent(getApplicationContext(),MENU.class);
                         startActivity(i);
                     }else {
                         Toast toast1 =
