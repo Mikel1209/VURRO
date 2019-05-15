@@ -87,7 +87,7 @@ public class MENU extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-finish();
+            finish();//UwU
             }
         });
 
