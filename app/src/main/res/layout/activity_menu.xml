@@ -104,7 +104,7 @@
         app:srcCompat="@drawable/info" />
 
     <ImageButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/imgbcerrar"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginEnd="5dp"

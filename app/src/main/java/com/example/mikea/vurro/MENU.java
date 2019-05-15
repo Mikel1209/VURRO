@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class MENU extends AppCompatActivity {
     Button btnConectar,btnManejo,btnCajas,btnRutas,btnManual,btnUsuarios;
-    ImageButton imgbinfo;
+    ImageButton imgbinfo,imgbcerrar;
     Intent i;
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -24,6 +24,7 @@ public class MENU extends AppCompatActivity {
         btnManual= (Button)findViewById(R.id.btnManual);
         btnUsuarios = (Button)findViewById(R.id.btnUsuarios);
         imgbinfo=(ImageButton)findViewById(R.id.imgbinfo);
+        imgbcerrar=(ImageButton)findViewById(R.id.imgbcerrar);
 
         /*
             @ Aquí se manda a los activitys correspondientes
@@ -68,6 +69,25 @@ public class MENU extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i= new Intent(getApplicationContext(),Usuario.class);
                 startActivity(i);
+            }
+        });
+        imgbinfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                LayoutInflater infor = getLayoutInflater();
+                Toast mensaje = new Toast(getApplicationContext());
+                View informacion= infor.inflate(R.layout.info,null);
+                mensaje.setDuration(Toast.LENGTH_LONG);
+                mensaje.setView(informacion);
+                mensaje.show();
+            }
+        });
+        imgbcerrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+finish();
             }
         });
 

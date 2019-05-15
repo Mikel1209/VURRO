@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="358dp"
+        android:layout_height="465dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="Soporte Tecnico\nMiguel A. Bautista López:\nCel:5566374454 \nCorreo: mikeangellopez1@gmail.com \n\nEurime G. Reyes Fonseca\nCel:5550085092\nCorreo:ewasfonseca@gmail.com\n\nPaola J. Yebra Rivero\nCel:5560832979\nCorreo:paolemon01@gmail.com"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="16dp" />
+</android.support.constraint.ConstraintLayout>
