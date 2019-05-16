@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">V.U.R.R.O</string>
+    <string-array name="Opciones">
+        <item>Opciones</item>
+        <item>Manejo</item>
+        <item>Usuarios</item>
+        <item>Abrir/Cerrar cajas</item>
+    </string-array>
 </resources>

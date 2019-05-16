@@ -8,22 +8,7 @@
     tools:context=".INICIO">
 
     <ImageButton
-        android:id="@+id/imgbcerrar2"
-        android:layout_width="50dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="268dp"
-        android:layout_marginLeft="268dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="24dp"
-        android:background="?android:attr/panelBackground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imgbinfo3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/logout" />
-
-    <ImageButton
-        android:id="@+id/imgbinfo3"
+        android:id="@+id/imgbinfo"
         android:layout_width="37dp"
         android:layout_height="37dp"
         android:layout_marginEnd="16dp"
@@ -55,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:ems="10"
@@ -112,12 +97,24 @@
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="?attr/colorButtonNormal"
         android:text="Iniciar Sesión"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txteContraseña" />
+
+    <CheckBox
+        android:id="@+id/chkCredenciales"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:text="Recuerdame"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txteContraseña" />
 

@@ -35,7 +35,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton11" />
+        app:layout_constraintTop_toBottomOf="@+id/imgbAbrir" />
 
     <TextView
         android:id="@+id/textView3"
@@ -52,7 +52,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton14" />
+        app:layout_constraintTop_toBottomOf="@+id/imgbCerrar" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -66,7 +66,7 @@
         app:srcCompat="@drawable/logo" />
 
     <ImageButton
-        android:id="@+id/imageButton11"
+        android:id="@+id/imgbAbrir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -81,7 +81,7 @@
         app:srcCompat="@drawable/abierto" />
 
     <ImageButton
-        android:id="@+id/imageButton14"
+        android:id="@+id/imgbCerrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"

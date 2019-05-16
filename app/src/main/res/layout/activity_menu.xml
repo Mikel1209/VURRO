@@ -28,7 +28,7 @@
         android:id="@+id/btnManejo"
         android:layout_width="142dp"
         android:layout_height="67dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="116dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:background="@drawable/redondear"
@@ -114,5 +114,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imgbinfo"
         app:srcCompat="@drawable/logout" />
+
+    <TextView
+        android:id="@+id/txtUsuario"
+        android:layout_width="139dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

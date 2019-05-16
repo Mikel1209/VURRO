@@ -8,7 +8,7 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="372dp"
+        android:layout_width="323dp"
         android:layout_height="478dp"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
@@ -19,7 +19,7 @@
         android:ems="10"
         android:enabled="false"
         android:inputType="textMultiLine"
-        android:text="Soporte Tecnico \n\nMiguel A. Bautista López:\nCel:5566374454 \nCorreo: mikeangellopez1@gmail.com \n\nEurime G. Reyes Fonseca\nCel:5550085092\nCorreo:ewasfonseca@gmail.com\n\nPaola J. Yebra Rivero\nCel:5560832979\nCorreo:paolemon01@gmail.com"
+        android:text="Soporte Tecnico\nMiguel A. Bautista López:\nCel:5566374454 \nCorreo: mikeangellopez1@gmail.com \n\nEurime G. Reyes Fonseca\nCel:5550085092\nCorreo:ewasfonseca@gmail.com\n\nPaola J. Yebra Rivero\nCel:5560832979\nCorreo:paolemon01@gmail.com"
         android:textColor="@android:color/background_dark"
         android:textSize="24sp"
         android:textStyle="bold"

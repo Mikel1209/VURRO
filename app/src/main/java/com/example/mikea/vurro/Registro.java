@@ -12,7 +12,7 @@ import OpenHelper.SQLite_OpenHelper;
 
 public class Registro extends AppCompatActivity {
     Button btnRegis;
-    EditText txtUsuario, txtContraseña;
+    EditText txtUsuario, txtContraseña,txtContraseña2;
 
     SQLite_OpenHelper helper = new SQLite_OpenHelper(this, "BD1", null, 1);
 
@@ -24,6 +24,7 @@ public class Registro extends AppCompatActivity {
         btnRegis = (Button) findViewById(R.id.btnRegis);
         txtUsuario = (EditText) findViewById(R.id.txtUsuario);
         txtContraseña = (EditText) findViewById(R.id.txtContraseña);
+        txtContraseña2=(EditText)findViewById(R.id.txtContraseña2);
 
 
 
@@ -32,6 +33,7 @@ public class Registro extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
+
         if (txtUsuario.getText().toString().equals("") || txtContraseña.getText().toString().equals("") )
         {
 
@@ -51,17 +53,29 @@ public class Registro extends AppCompatActivity {
         }
          else
             {
+                if(txtContraseña.getText().toString( ).equals( txtContraseña2.getText().toString()) )
+                {
+                    helper.abrir();
+                    helper.insertarRG(txtUsuario.getText().toString(),
+                            txtContraseña.getText().toString());
+                    helper.cerrar();
+                    Toast toast1 = Toast.makeText(getApplicationContext(), "Registro correctamente subido", Toast.LENGTH_SHORT);
+                    toast1.show();
+
+                    Intent i = new Intent(getApplicationContext(), INICIO.class);
+                    startActivity(i);
+
+                }
+
+                else
+                {
+                    Toast toast = Toast.makeText(getApplicationContext(), "Error de Autenticación", Toast.LENGTH_SHORT);
+                    toast.show();
+
+                }
 
 
-                        helper.abrir();
-                        helper.insertarRG(txtUsuario.getText().toString(),
-                                txtContraseña.getText().toString());
-                        helper.cerrar();
-                        Toast toast1 = Toast.makeText(getApplicationContext(), "Registro correctamente subido", Toast.LENGTH_SHORT);
-                        toast1.show();
 
-                        Intent i = new Intent(getApplicationContext(), INICIO.class);
-                        startActivity(i);
 
 
             }

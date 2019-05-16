@@ -7,12 +7,14 @@ import android.view.LayoutInflater;
 import android.widget.Button;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MENU extends AppCompatActivity {
     Button btnConectar,btnManejo,btnCajas,btnRutas,btnManual,btnUsuarios;
     ImageButton imgbinfo,imgbcerrar;
     Intent i;
+    TextView txtUsuario;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -25,6 +27,8 @@ public class MENU extends AppCompatActivity {
         btnUsuarios = (Button)findViewById(R.id.btnUsuarios);
         imgbinfo=(ImageButton)findViewById(R.id.imgbinfo);
         imgbcerrar=(ImageButton)findViewById(R.id.imgbcerrar);
+        txtUsuario=(TextView)findViewById(R.id.txtUsuario);
+
 
         /*
             @ Aquí se manda a los activitys correspondientes
@@ -87,25 +91,26 @@ public class MENU extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-            finish();//UwU
+                    finish();
             }
         });
 
         /*
             @Aquí acaba de mandar a los activitys correspondientes
          */
-       /* imgbinfo.setOnClickListener(Voca8 View.OnClickListener()
+        imgbinfo.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
                 LayoutInflater infor = getLayoutInflater();
-                Toast mensaje = Voca8 Toast(getApplicationContext());
-                View informacion= infor.inflate(R.id.imgbInfo,null);                        , null);
+                Toast mensaje = new Toast(getApplicationContext());
+                View informacion= infor.inflate(R.layout.informacion,null);
                 mensaje.setDuration(Toast.LENGTH_LONG);
                 mensaje.setView(informacion);
+                mensaje.show();
             }
-        });*/
+        });
 
     }
 
