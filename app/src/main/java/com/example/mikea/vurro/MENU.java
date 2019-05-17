@@ -1,6 +1,8 @@
 package com.example.mikea.vurro;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -91,7 +93,13 @@ public class MENU extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                    finish();
+                SharedPreferences preferences = getSharedPreferences("credenciales", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("user",null);
+                editor.putString("pass",null);
+                editor.commit();
+
+                finish();
             }
         });
 
