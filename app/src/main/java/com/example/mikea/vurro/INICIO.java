@@ -57,12 +57,15 @@ SQLite_OpenHelper helper=new SQLite_OpenHelper(this, "BD1",null,1);
         btnInSesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 ArrayList<String> datos = helper.getUserPrefs(txteUsuario.getText().toString(), txteContraseña.getText().toString());
                 if (datos.isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Usuario y/o Contraseña incorrectos", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(INICIO.this, "Usuario encontrado", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(getApplicationContext(), MENU.class);
+
 
                     /*Si su casilla es marcada se guardan los datos
                      * PD: NO ES .isSelected*/
@@ -90,6 +93,9 @@ SQLite_OpenHelper helper=new SQLite_OpenHelper(this, "BD1",null,1);
         SharedPreferences preferences = getSharedPreferences("credenciales", Context.MODE_PRIVATE);
         user=preferences.getString("user","");
         pass=preferences.getString("pass","");
+
+
+
     }
 
     private void guardar()
@@ -101,9 +107,12 @@ SQLite_OpenHelper helper=new SQLite_OpenHelper(this, "BD1",null,1);
         String Usuario=txteUsuario.getText().toString();
         String Contraseña=txteContraseña.getText().toString();
 
+
+
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString("user",Usuario);
         editor.putString("pass",Contraseña);
+
         editor.commit();
     }
 }

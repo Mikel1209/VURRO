@@ -4,19 +4,51 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import OpenHelper.SQLite_OpenHelper;
 
 public class Usuario extends AppCompatActivity {
     ImageButton imgbInfo;
+
+    ArrayList<String> lista = new ArrayList<>();
+
+    ListView lstLista;
+    ArrayAdapter adaptador;
+
+
+    /**
+     *
+     * Ignora esto
+     * Se inserto esta linea al estar usando Usuario.find ()
+     *  public static List<Usuario> find() {
+     *         return null;
+     *     }
+
+     */
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_usuario);
 
-        imgbInfo=(ImageButton)findViewById(R.id.imgbinfo);
+        lstLista= findViewById(R.id.lstLista);
+        SQLite_OpenHelper db = new SQLite_OpenHelper(getApplicationContext(), "name", null,1 );
+        lista=db.llenar_lista();
+        adaptador = new ArrayAdapter<>(Usuario.this, android.R.layout.simple_list_item_1, lista);
+        lstLista.setAdapter(adaptador);
+        //adaptador= new ArrayAdapter( this,android.R.layout.simple_list_item_1);
+        //lstLista.setAdapter(adaptador);
 
+
+        imgbInfo=(ImageButton)findViewById(R.id.imgbinfo);
         imgbInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

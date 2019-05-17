@@ -8,14 +8,17 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class Cajas extends AppCompatActivity {
-    ImageButton imgbInfo;
+    ImageButton imgbInfo,imgbAbrir,imgbCerrar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cajas);
 
         imgbInfo=(ImageButton)findViewById(R.id.imgbinfo);
-        imgbInfo.setOnClickListener(new View.OnClickListener() {
+        imgbAbrir=(ImageButton)findViewById(R.id.imgbAbrir);
+        imgbCerrar=(ImageButton)findViewById(R.id.imgbCerrar);
+        imgbInfo.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v) {
                 LayoutInflater infor = getLayoutInflater();

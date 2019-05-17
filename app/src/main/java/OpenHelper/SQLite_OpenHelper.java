@@ -7,6 +7,8 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.example.mikea.vurro.Usuario;
+
 import java.util.ArrayList;
 
 public class SQLite_OpenHelper extends SQLiteOpenHelper {
@@ -65,7 +67,34 @@ public class SQLite_OpenHelper extends SQLiteOpenHelper {
 
         return credenciales;
     }
+        //Modificacion
 
+    public ArrayList <String> llenar_lista (){
+
+        ArrayList<String> lista = new ArrayList<>();
+        SQLiteDatabase database = this.getReadableDatabase();
+        String q = "SELECT * FROM usuarios";
+        Cursor usuarios = database.rawQuery(q,null);
+        /**
+        if ( usuarios.moveToFirst())
+
+        {
+            do {
+               // lista.add(String.valueOf(usuarios.getInt(0)));
+                lista.add((usuarios.getString(1)));
+            }while (usuarios.moveToNext());
+
+
+        }
+        */
+        usuarios.moveToFirst();
+        while(!usuarios.isAfterLast())
+        {
+            lista.add(usuarios.getString(1));
+            usuarios.moveToNext();
+        }
+        return lista;
+    }
 
 }
 

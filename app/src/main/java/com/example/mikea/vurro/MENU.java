@@ -3,6 +3,7 @@ package com.example.mikea.vurro;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,6 +12,8 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.List;
 
 public class MENU extends AppCompatActivity {
     Button btnConectar,btnManejo,btnCajas,btnRutas,btnManual,btnUsuarios;
@@ -31,11 +34,16 @@ public class MENU extends AppCompatActivity {
         imgbcerrar=(ImageButton)findViewById(R.id.imgbcerrar);
         txtUsuario=(TextView)findViewById(R.id.txtUsuario);
 
-
-        /*
+        /**
+         *         Bundle bundle = getIntent().getExtras();
+         *         String user= bundle.getString("Usuario");
+         *         txtUsuario.setText(user);
+         */
+         /*
             @ Aquí se manda a los activitys correspondientes
          */
 
+        AlertDialog dialog = new AlertDialog.Builder(this).setMessage("Bienvenido").show();
         btnConectar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
@@ -75,20 +83,13 @@ public class MENU extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i= new Intent(getApplicationContext(),Usuario.class);
                 startActivity(i);
+
+                //List<Usuario> usuarioLista = Usuario.find(Usuario.class)
+
+
             }
         });
-        imgbinfo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                LayoutInflater infor = getLayoutInflater();
-                Toast mensaje = new Toast(getApplicationContext());
-                View informacion= infor.inflate(R.layout.info,null);
-                mensaje.setDuration(Toast.LENGTH_LONG);
-                mensaje.setView(informacion);
-                mensaje.show();
-            }
-        });
+
         imgbcerrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
@@ -97,8 +98,8 @@ public class MENU extends AppCompatActivity {
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putString("user",null);
                 editor.putString("pass",null);
-                editor.commit();
 
+                editor.commit();
                 finish();
             }
         });
@@ -121,5 +122,6 @@ public class MENU extends AppCompatActivity {
         });
 
     }
+
 
 }

@@ -19,67 +19,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/info" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="368dp"
-        android:layout_height="345dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="50dp">
-
-            <TextView
-                android:id="@+id/Usuario"
-                android:layout_width="90dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="Id del Usuarios"
-                android:textColor="@android:color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="90dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/transparent"
-                android:gravity="center"
-                android:text="Nombre y Apellido"
-                android:textColor="@android:color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="90dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="Lugar, Hora y Fecha de partida"
-                android:textColor="@android:color/white"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="95dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="Lugar, Hora y Fecha de llegada"
-                android:textColor="@android:color/white"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-        </TableRow>
-    </LinearLayout>
-
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="225dp"
@@ -90,5 +29,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/logo" />
+
+    <ListView
+        android:id="@+id/lstLista"
+        android:layout_width="290dp"
+        android:layout_height="321dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
