@@ -16,22 +16,9 @@ import OpenHelper.SQLite_OpenHelper;
 
 public class Usuario extends AppCompatActivity {
     ImageButton imgbInfo;
-
     ArrayList<String> lista = new ArrayList<>();
-
     ListView lstLista;
     ArrayAdapter adaptador;
-
-
-    /**
-     *
-     * Ignora esto
-     * Se inserto esta linea al estar usando Usuario.find ()
-     *  public static List<Usuario> find() {
-     *         return null;
-     *     }
-
-     */
 
 
     @Override
@@ -40,13 +27,10 @@ public class Usuario extends AppCompatActivity {
         setContentView(R.layout.activity_usuario);
 
         lstLista= findViewById(R.id.lstLista);
-        SQLite_OpenHelper db = new SQLite_OpenHelper(getApplicationContext(), "name", null,1 );
+        SQLite_OpenHelper db = new SQLite_OpenHelper(Usuario.this, "BD1", null,1 );
         lista=db.llenar_lista();
         adaptador = new ArrayAdapter<>(Usuario.this, android.R.layout.simple_list_item_1, lista);
         lstLista.setAdapter(adaptador);
-        //adaptador= new ArrayAdapter( this,android.R.layout.simple_list_item_1);
-        //lstLista.setAdapter(adaptador);
-
 
         imgbInfo=(ImageButton)findViewById(R.id.imgbinfo);
         imgbInfo.setOnClickListener(new View.OnClickListener() {
