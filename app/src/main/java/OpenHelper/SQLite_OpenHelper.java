@@ -75,18 +75,7 @@ public class SQLite_OpenHelper extends SQLiteOpenHelper {
         SQLiteDatabase database = this.getReadableDatabase();
         String q = "SELECT * FROM usuarios";
         Cursor usuarios = database.rawQuery(q,null);
-        /**
-        if ( usuarios.moveToFirst())
 
-        {
-            do {
-               // lista.add(String.valueOf(usuarios.getInt(0)));
-                lista.add((usuarios.getString(1)));
-            }while (usuarios.moveToNext());
-
-
-        }
-        */
         usuarios.moveToFirst();
         while(!usuarios.isAfterLast())
         {

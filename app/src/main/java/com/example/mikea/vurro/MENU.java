@@ -43,7 +43,7 @@ public class MENU extends AppCompatActivity {
             @ Aquí se manda a los activitys correspondientes
          */
 
-        AlertDialog dialog = new AlertDialog.Builder(this).setMessage("Bienvenido").show();
+
         btnConectar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)

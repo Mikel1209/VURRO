@@ -40,7 +40,7 @@ public class Usuario extends AppCompatActivity {
         setContentView(R.layout.activity_usuario);
 
         lstLista= findViewById(R.id.lstLista);
-        SQLite_OpenHelper db = new SQLite_OpenHelper(getApplicationContext(), "name", null,1 );
+        SQLite_OpenHelper db = new SQLite_OpenHelper(this, "BD1",null,1);
         lista=db.llenar_lista();
         adaptador = new ArrayAdapter<>(Usuario.this, android.R.layout.simple_list_item_1, lista);
         lstLista.setAdapter(adaptador);

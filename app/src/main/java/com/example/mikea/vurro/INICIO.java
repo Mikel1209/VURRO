@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.SQLException;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -64,6 +65,7 @@ SQLite_OpenHelper helper=new SQLite_OpenHelper(this, "BD1",null,1);
                     Toast.makeText(getApplicationContext(), "Usuario y/o Contraseña incorrectos", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(INICIO.this, "Usuario encontrado", Toast.LENGTH_SHORT).show();
+                    AlertDialog dialog = new AlertDialog.Builder(INICIO.this).setMessage("Bienvenido").show();
                     Intent i = new Intent(getApplicationContext(), MENU.class);
 
 
