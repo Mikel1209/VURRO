@@ -2,6 +2,7 @@ package com.example.mikea.vurro;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
@@ -12,18 +13,17 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import java.util.Set;
 
-public class Conexion extends AppCompatActivity
-{
-    TextView txtTitulo;
-    ListView lstLista;
+public class DispositivosBT extends AppCompatActivity {
+
 
     //1)
     // Depuración de LOGCAT
-    private static final String TAG = "Conexion"; //<-<- PARTE A MODIFICAR >->->
+    private static final String TAG = "DispositivosBT"; //<-<- PARTE A MODIFICAR >->->
     // Declaracion de ListView
-    ListView IdLista;
+    ListView lstLista;
     // String que se enviara a la actividad principal, mainactivity
     public static String EXTRA_DEVICE_ADDRESS = "device_address";
 
@@ -32,10 +32,9 @@ public class Conexion extends AppCompatActivity
     private ArrayAdapter mPairedDevicesArrayAdapter;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.nombre_dispositivos);
+        setContentView(R.layout.activity_conexion);
     }
 
     @Override
@@ -53,15 +52,15 @@ public class Conexion extends AppCompatActivity
         lstLista.setOnItemClickListener(mDeviceClickListener);
         // Obtiene el adaptador local Bluetooth adapter
         mBtAdapter = BluetoothAdapter.getDefaultAdapter();
+
         //------------------- EN CASO DE ERROR -------------------------------------
         //SI OBTIENES UN ERROR EN LA LINEA (BluetoothDevice device : pairedDevices)
         //CAMBIA LA SIGUIENTE LINEA POR
         //Set <BluetoothDevice> pairedDevices = mBtAdapter.getBondedDevices();
         //------------------------------------------------------------------------------
 
-        // Obtiene un conjunto de dispositivos actualmente emparejados y agregua a 'pairedDevices'
-        Set<BluetoothDevice> pairedDevices = mBtAdapter.getBondedDevices();
-
+        // Obtiene un conjunto de dispositivos actualmente emparejados y agrega a 'pairedDevices'
+        Set <BluetoothDevice> pairedDevices = mBtAdapter.getBondedDevices();
 
         // Adiciona un dispositivos previo emparejado al array
         if (pairedDevices.size() > 0)
@@ -82,33 +81,26 @@ public class Conexion extends AppCompatActivity
 
             // Realiza un intent para iniciar la siguiente actividad
             // mientras toma un EXTRA_DEVICE_ADDRESS que es la dirección MAC.
-            Intent i = new Intent(Conexion.this, MainActivity.class);//<-<- PARTE A MODIFICAR >->->
+            Intent i = new Intent(DispositivosBT.this, Cajas.class);//<-<- PARTE A MODIFICAR >->->
             i.putExtra(EXTRA_DEVICE_ADDRESS, address);
             startActivity(i);
         }
     };
 
-    private void VerificarEstadoBT()
-    {
+    private void VerificarEstadoBT() {
         // Comprueba que el dispositivo tiene Bluetooth y que está encendido.
         mBtAdapter= BluetoothAdapter.getDefaultAdapter();
-        if(mBtAdapter==null)
-        {
+        if(mBtAdapter==null) {
             Toast.makeText(getBaseContext(), "El dispositivo no soporta Bluetooth", Toast.LENGTH_SHORT).show();
-        }
-        else
-        {if (mBtAdapter.isEnabled())
-        {
-            Log.d(TAG, "...Bluetooth Activado...");
-        }
-        else
-        {
-            //Solicita al usuario que active Bluetooth
-            Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-            startActivityForResult(enableBtIntent, 1);
+        } else {
+            if (mBtAdapter.isEnabled()) {
+                Log.d(TAG, "...Bluetooth Activado...");
+            } else {
+                //Solicita al usuario que active Bluetooth
+                Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                startActivityForResult(enableBtIntent, 1);
 
-        }
+            }
         }
     }
 }
-

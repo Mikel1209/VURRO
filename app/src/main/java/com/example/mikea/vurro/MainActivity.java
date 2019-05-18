@@ -5,11 +5,14 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
+import android.media.Image;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,9 +22,9 @@ import java.io.OutputStream;
 import java.util.UUID;
 
 public class MainActivity extends AppCompatActivity
-{
+{   ImageButton imgbInfo,imgbAbrir,imgbCerrar;
     Button btnEncender, btnApagar, btnDesconectar;
-    TextView txtControl, txtBufferIn;
+    TextView  txtBufferIn;
 
     Handler bluetoothIn;
     final int handlerState = 0;
@@ -41,25 +44,33 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnEncender=(Button)findViewById(R.id.btnEncender);
-        btnApagar=(Button)findViewById(R.id.btnApagar);
+        imgbAbrir=(ImageButton)findViewById(R.id.imgbAbrir);
+        imgbCerrar=(ImageButton)findViewById(R.id.imgbCerrar);
         btnDesconectar=(Button)findViewById(R.id.btnDesconectar);
-        txtControl=(TextView) findViewById(R.id.txtControl);
         txtBufferIn=(TextView)findViewById(R.id.txtBufferIn);
-
-        bluetoothIn = new Handler()
+        imgbInfo=(ImageButton)findViewById(R.id.imgbinfo);
+        imgbInfo.setOnClickListener(new View.OnClickListener()
         {
-            public void handleMessage(android.os.Message msg)
-            {
-                if (msg.what == handlerState)
-                {
+            @Override
+            public void onClick(View v) {
+                LayoutInflater infor = getLayoutInflater();
+                Toast mensaje = new Toast(getApplicationContext());
+                View informacion= infor.inflate(R.layout.informacion,null);
+                mensaje.setDuration(Toast.LENGTH_LONG);
+                mensaje.setView(informacion);
+                mensaje.show();
+            }
+        });
+
+        bluetoothIn = new Handler() {
+            public void handleMessage(android.os.Message msg) {
+                if (msg.what == handlerState) {
                     String readMessage = (String) msg.obj;
                     DataStringIN.append(readMessage);
 
                     int endOfLineIndex = DataStringIN.indexOf("#");
 
-                    if (endOfLineIndex > 0)
-                    {
+                    if (endOfLineIndex > 0) {
                         String dataInPrint = DataStringIN.substring(0, endOfLineIndex);
                         txtBufferIn.setText("Dato: " + dataInPrint);//<-<- PARTE A MODIFICAR >->->
                         DataStringIN.delete(0, DataStringIN.length());
@@ -74,30 +85,21 @@ public class MainActivity extends AppCompatActivity
         // Configuracion onClick listeners para los botones
         // para indicar que se realizara cuando se detecte
         // el evento de Click
-
-        btnEncender.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
+        imgbAbrir.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)
             {
                 MyConexionBT.write("1");
             }
         });
 
-        btnApagar.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
+        imgbCerrar.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
                 MyConexionBT.write("0");
             }
         });
 
-        btnDesconectar.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
+        btnDesconectar.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
                 if (btSocket!=null)
                 {
                     try {btSocket.close();}
@@ -123,7 +125,7 @@ public class MainActivity extends AppCompatActivity
         //Consigue la direccion MAC desde DeviceListActivity via intent
         Intent intent = getIntent();
         //Consigue la direccion MAC desde DeviceListActivity via EXTRA
-        address = intent.getStringExtra(Conexion.EXTRA_DEVICE_ADDRESS);//<-<- PARTE A MODIFICAR >->->
+        address = intent.getStringExtra(DispositivosBT.EXTRA_DEVICE_ADDRESS);//<-<- PARTE A MODIFICAR >->->
         //Setea la direccion MAC
         BluetoothDevice device = btAdapter.getRemoteDevice(address);
 
@@ -216,10 +218,9 @@ public class MainActivity extends AppCompatActivity
             catch (IOException e)
             {
                 //si no es posible enviar datos se cierra la conexión
-                Toast.makeText(getBaseContext(), "Conexion falida", Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(), "La Conexión fallo", Toast.LENGTH_LONG).show();
                 finish();
             }
         }
     }
-
 }

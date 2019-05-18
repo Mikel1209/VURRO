@@ -8,6 +8,37 @@
     android:background="@drawable/voca8"
     tools:context=".Cajas">
 
+    <TextView
+        android:id="@+id/txtBufferIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="204dp"
+        android:text="Dato:"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/btnDesconectar"
+        android:layout_width="161dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="348dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Desconectar"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageButton
         android:id="@+id/imgbinfo"
         android:layout_width="40dp"
@@ -26,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:text="Abrir la caja "
@@ -34,6 +65,7 @@
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgbAbrir" />
 
@@ -43,7 +75,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:text="Cerrar la caja"
@@ -51,6 +82,7 @@
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgbCerrar" />
 
@@ -67,15 +99,16 @@
 
     <ImageButton
         android:id="@+id/imgbAbrir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="113dp"
+        android:layout_height="113dp"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:background="?android:attr/panelBackground"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/abierto" />
@@ -86,13 +119,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:background="?android:attr/panelBackground"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.813"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/cerrado" />
 
 </android.support.constraint.ConstraintLayout>
