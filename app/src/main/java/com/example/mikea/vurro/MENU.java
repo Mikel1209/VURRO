@@ -16,7 +16,7 @@ public class MENU extends AppCompatActivity {
     Button btnConectar,btnManejo,btnCajas,btnManual,btnUsuarios;
     ImageButton imgbinfo,imgbcerrar;
     Intent i;
-    TextView txtUsuario;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -29,7 +29,7 @@ public class MENU extends AppCompatActivity {
         btnUsuarios = (Button)findViewById(R.id.btnUsuarios);
         imgbinfo=(ImageButton)findViewById(R.id.imgbinfo);
         imgbcerrar=(ImageButton)findViewById(R.id.imgbcerrar);
-        txtUsuario=(TextView)findViewById(R.id.txtUsuario);
+
 
         /**
          *         Bundle bundle = getIntent().getExtras();
