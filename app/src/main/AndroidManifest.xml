@@ -62,7 +62,6 @@
                 android:value=".MENU" />
         </activity>
         <activity android:name=".Conexion" />
-        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
