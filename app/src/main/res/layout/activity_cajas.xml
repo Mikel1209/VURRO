@@ -5,7 +5,7 @@
     android:id="@+id/imgbInformacion"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_dark"
+    android:background="@drawable/voca8"
     tools:context=".Cajas">
 
     <ImageButton
@@ -30,8 +30,8 @@
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:text="Abrir la caja "
-        android:textColor="@android:color/white"
-        android:textSize="24sp"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,8 +47,8 @@
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:text="Cerrar la caja"
-        android:textColor="@android:color/white"
-        android:textSize="24sp"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

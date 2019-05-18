@@ -3,7 +3,6 @@ package com.example.mikea.vurro;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,10 +12,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.List;
-
 public class MENU extends AppCompatActivity {
-    Button btnConectar,btnManejo,btnCajas,btnRutas,btnManual,btnUsuarios;
+    Button btnConectar,btnManejo,btnCajas,btnManual,btnUsuarios;
     ImageButton imgbinfo,imgbcerrar;
     Intent i;
     TextView txtUsuario;
