@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mikea.vurro">
+
     <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"></uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/icono"
@@ -10,7 +12,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
             android:name=".INICIO"
             android:theme="@style/Theme.AppCompat.NoActionBar">
@@ -62,6 +63,7 @@
                 android:value=".MENU" />
         </activity>
         <activity android:name=".Conexion" />
+        <activity android:name=".this_is_us"></activity>
     </application>
 
 </manifest>

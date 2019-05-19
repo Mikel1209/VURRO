@@ -80,17 +80,6 @@
         app:layout_constraintStart_toEndOf="@+id/btnCajas"
         app:layout_constraintTop_toBottomOf="@+id/btnManejo" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="273dp"
-        android:layout_height="253dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/logo" />
-
     <ImageButton
         android:id="@+id/imgbinfo"
         android:layout_width="37dp"
@@ -114,5 +103,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imgbinfo"
         app:srcCompat="@drawable/logout" />
+
+    <ImageButton
+        android:id="@+id/imgbVURRO"
+        android:layout_width="261dp"
+        android:layout_height="147dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/logo2" />
 
 </android.support.constraint.ConstraintLayout>

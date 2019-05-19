@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class MENU extends AppCompatActivity {
     Button btnConectar,btnManejo,btnCajas,btnManual,btnUsuarios;
-    ImageButton imgbinfo,imgbcerrar;
+    ImageButton imgbinfo,imgbcerrar,imgbVURRO;
     Intent i;
 
     @Override
@@ -29,6 +29,7 @@ public class MENU extends AppCompatActivity {
         btnUsuarios = (Button)findViewById(R.id.btnUsuarios);
         imgbinfo=(ImageButton)findViewById(R.id.imgbinfo);
         imgbcerrar=(ImageButton)findViewById(R.id.imgbcerrar);
+        imgbVURRO=(ImageButton)findViewById(R.id.imgbVURRO);
 
 
         /**
@@ -86,6 +87,15 @@ public class MENU extends AppCompatActivity {
 
             }
         });
+        imgbVURRO.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i= new Intent(getApplicationContext(),this_is_us.class);
+                startActivity(i);
+
+            }
+        });
+
 
         imgbcerrar.setOnClickListener(new View.OnClickListener() {
             @Override
