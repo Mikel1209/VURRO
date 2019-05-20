@@ -12,7 +12,7 @@ import OpenHelper.SQLite_OpenHelper;
 
 public class Registro extends AppCompatActivity {
     Button btnRegis;
-    EditText txtUsuario, txtContraseña,txtContraseña2;
+    EditText txtUsuario, txtContraseña,txtContraseña2,txtContraseña3;
 
     SQLite_OpenHelper helper = new SQLite_OpenHelper(this, "BD1", null, 1);
 
@@ -25,6 +25,7 @@ public class Registro extends AppCompatActivity {
         txtUsuario = (EditText) findViewById(R.id.txtUsuario);
         txtContraseña = (EditText) findViewById(R.id.txtContraseña);
         txtContraseña2=(EditText)findViewById(R.id.txtContraseña2);
+        txtContraseña3=(EditText)findViewById(R.id.txtContraseña3);
 
 
 
@@ -33,9 +34,10 @@ public class Registro extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
+                if(txtContraseña3.getText().toString().equals("Dmitri")){
 
-        if (txtUsuario.getText().toString().equals("") || txtContraseña.getText().toString().equals("") )
-        {
+                  if (txtUsuario.getText().toString().equals("") || txtContraseña.getText().toString().equals("") )
+                     {
 
 
                     txtUsuario.setError("Campo Vacio");
@@ -50,7 +52,7 @@ public class Registro extends AppCompatActivity {
 
 
 
-        }
+                     }
          else
             {
                 if(txtContraseña.getText().toString( ).equals( txtContraseña2.getText().toString()) )
@@ -78,9 +80,19 @@ public class Registro extends AppCompatActivity {
 
 
 
-            }
+               }}
+               else
+                {
+                    Toast toast = Toast.makeText(getApplicationContext(), "Error de Autenticación de el Profesor intentelo de nuevo ", Toast.LENGTH_SHORT);
+                    toast.show();
+                }
+
+
+
             }
         });
+
+
 
     }
 }

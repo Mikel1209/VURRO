@@ -51,28 +51,14 @@ public void start()
         AnimationDrawable animacion = new AnimationDrawable();
 
         animacion.addFrame(getResources().getDrawable(R.drawable.f1),3000);
-       animacion.addFrame(getResources().getDrawable(R.drawable.f2),3000);
-        animacion.addFrame(getResources().getDrawable(R.drawable.f3),3000);
-        animacion.addFrame(getResources().getDrawable(R.drawable.f4),3000);
+
         animacion.addFrame(getResources().getDrawable(R.drawable.f5),3000);
-        animacion.addFrame(getResources().getDrawable(R.drawable.f6),3000);
-        animacion.addFrame(getResources().getDrawable(R.drawable.f7),3000);
-        animacion.addFrame(getResources().getDrawable(R.drawable.f8),3000);
-        animacion.addFrame(getResources().getDrawable(R.drawable.f9),3000);
-        animacion.addFrame(getResources().getDrawable(R.drawable.f10),3000);
-        animacion.addFrame(getResources().getDrawable(R.drawable.f11),3000);
-        animacion.addFrame(getResources().getDrawable(R.drawable.f12),3000);
-        animacion.addFrame(getResources().getDrawable(R.drawable.f13),3000);
-        animacion.addFrame(getResources().getDrawable(R.drawable.f14),3000);
+
+
+
+
         animacion.addFrame(getResources().getDrawable(R.drawable.f15),3000);
-        animacion.addFrame(getResources().getDrawable(R.drawable.f16),3000);
-        animacion.addFrame(getResources().getDrawable(R.drawable.f17),3000);
-        animacion.addFrame(getResources().getDrawable(R.drawable.f18),3000);
-        animacion.addFrame(getResources().getDrawable(R.drawable.f19),3000);
-        animacion.addFrame(getResources().getDrawable(R.drawable.f20),3000);
-       animacion.addFrame(getResources().getDrawable(R.drawable.f21),3000);
-        animacion.addFrame(getResources().getDrawable(R.drawable.f22),3000);
-        animacion.addFrame(getResources().getDrawable(R.drawable.f23),3000);
+
         animacion.addFrame(getResources().getDrawable(R.drawable.f24),3000);
 
         imgUs.setBackgroundDrawable(animacion);
