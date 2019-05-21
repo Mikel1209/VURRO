@@ -21,7 +21,7 @@ public class Conexion extends AppCompatActivity {
 
     //1)
     // Depuración de LOGCAT
-    private static final String TAG = "DispositivosBT"; //<-<- PARTE A MODIFICAR >->->
+    private static final String TAG = "Conexion"; //<-<- PARTE A MODIFICAR >->->
     // Declaracion de ListView
     ListView lstLista;
     // String que se enviara a la actividad principal, mainactivity

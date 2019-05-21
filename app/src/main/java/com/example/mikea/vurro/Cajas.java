@@ -152,6 +152,8 @@ public class Cajas extends AppCompatActivity
         super.onPause();
         try
         { // Cuando se sale de la aplicación esta parte permite
+            //
+            //
             // que no se deje abierto el socket
             btSocket.close();
         } catch (IOException e2) {}
