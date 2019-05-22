@@ -110,6 +110,7 @@ public class Manual extends AppCompatActivity {
 
                 if (spinner.getItemAtPosition(position).equals("Abrir/Cerrar cajas"))
                 {
+                    Cajas();
                     txtInformacion.setText("Después de dar click en el botón de \"Cerrar/Abrir cajas\" se abrira la página correspondiente, esta página cuenta con  2 botones los cuales nos sirven para abrir o cerrar la cerradura" +
                             "cuenta con un boton para desconectar nuetsro dispositivo, en la parte central se mostrara el dato que se esta dando (Abrir/Cerrar)");
                 }
