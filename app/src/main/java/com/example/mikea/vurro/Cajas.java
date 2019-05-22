@@ -60,6 +60,7 @@ public class Cajas extends AppCompatActivity
             }
         });
 
+
         bluetoothIn = new Handler() {
             public void handleMessage(android.os.Message msg) {
                 if (msg.what == handlerState) {
@@ -86,13 +87,13 @@ public class Cajas extends AppCompatActivity
         imgbAbrir.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)
             {
-                MyConexionBT.write("1");
+                MyConexionBT.write("7");
             }
         });
 
         imgbCerrar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                MyConexionBT.write("0");
+                MyConexionBT.write("8 ");
             }
         });
 

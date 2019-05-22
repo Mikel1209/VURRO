@@ -5,70 +5,62 @@ import android.graphics.drawable.AnimationDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
 
 public class this_is_us extends AppCompatActivity
 {   ImageButton imgbStart, imgbStop;
-    ImageView imgUs;
+    ImageView imgUss;
+    AnimationDrawable animacion = new AnimationDrawable();
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_this_is_us);
-
         imgbStart= (ImageButton)findViewById(R.id.imgbStart);
         imgbStop= (ImageButton)findViewById(R.id.imgbStop);
-        imgUs= (ImageView) findViewById(R.id.imgUs);
-View.OnClickListener Start = new View.OnClickListener()
-        {
-@Override
-public void onClick(View v)
-        {
-        if (v.getId()==R.id.imgbStart)
-        start();
+        imgUss= (ImageView) findViewById(R.id.imgUss);
+
+        imgbStart.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                inicio();
+            }
+        });
+
+        imgbStart.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                inicio();
+            }
+        });
+        imgbStop.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                stop();
+            }
+        });
+
         }
-        };
-        imgbStart.setOnClickListener(Start);
 
-        View.OnClickListener Stop = new View.OnClickListener()
+public void inicio ()
         {
-@Override
-public void onClick(View v)
-        {
-        if (v.getId()==R.id.imgbStop)
-        stop();
-        }
-        };
-        imgbStop.setOnClickListener(Stop);
-
-        }
-
-public void start()
-        {
-        AnimationDrawable animacion = new AnimationDrawable();
-
-        animacion.addFrame(getResources().getDrawable(R.drawable.f1),3000);
-
-        animacion.addFrame(getResources().getDrawable(R.drawable.f5),3000);
-
-
-
-
-        animacion.addFrame(getResources().getDrawable(R.drawable.f15),3000);
-
-        animacion.addFrame(getResources().getDrawable(R.drawable.f24),3000);
-
-        imgUs.setBackgroundDrawable(animacion);
-
+        animacion.addFrame(getResources().getDrawable(R.drawable.f24),1000);
+        animacion.addFrame(getResources().getDrawable(R.drawable.f1),1000);
+        animacion.addFrame(getResources().getDrawable(R.drawable.f5),1000);
+        animacion.addFrame(getResources().getDrawable(R.drawable.f7),1000);
+        animacion.addFrame(getResources().getDrawable(R.drawable.f15),1000);
+        animacion.setOneShot(false);
+        imgUss.setImageDrawable(animacion);
         animacion.start();
         }
 
 public void stop()
         {
-        AnimationDrawable animacion = new AnimationDrawable();
+
         animacion.stop();
         }
         }

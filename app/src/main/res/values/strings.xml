@@ -5,5 +5,7 @@
         <item>Manejo</item>
         <item>Usuarios</item>
         <item>Abrir/Cerrar cajas</item>
+        <item>Registro</item>
+        <item>Conexión</item>
     </string-array>
 </resources>

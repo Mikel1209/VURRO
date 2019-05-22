@@ -42,11 +42,13 @@ public class Manejar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manejar);
 
-        imgbinfo=(ImageButton)findViewById(R.id.imgbinfo);
+        imgbinfo=(ImageButton)findViewById(R.id.imgbinfo2);
         btniAbajo=(ImageButton)findViewById(R.id.btniAbajo);
         btniArriba=(ImageButton)findViewById(R.id.btniArriba);
         btniIzquierda=(ImageButton)findViewById(R.id.btniIzquierda);
         btniDerecha=(ImageButton)findViewById(R.id.btniDerecha);
+        btnDesconectar = findViewById(R.id.btnDesconectar2);
+        txtBufferIn=(TextView)findViewById(R.id.txtBufferIn);
 
         imgbinfo.setOnClickListener(new View.OnClickListener()
         {
@@ -87,23 +89,23 @@ public class Manejar extends AppCompatActivity {
         btniAbajo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)
             {
-                MyConexionBT.write("B");
+                MyConexionBT.write("3");
             }
         });
 
         btniArriba.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                MyConexionBT.write("R");
+                MyConexionBT.write("1");
             }
         });
         btniIzquierda.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                MyConexionBT.write("I");
+                MyConexionBT.write("4");
             }
         });
         btniDerecha.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                MyConexionBT.write("D");
+                MyConexionBT.write("2");
             }
         });
 

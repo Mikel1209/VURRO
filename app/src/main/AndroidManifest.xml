@@ -63,7 +63,13 @@
                 android:value=".MENU" />
         </activity>
         <activity android:name=".Conexion" />
-        <activity android:name=".this_is_us"></activity>
+        <activity android:name=".this_is_us">
+            android:name=".this_is_us"
+            android:parentActivityName=".MENU">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MENU" />
+        </activity>
     </application>
 
 </manifest>

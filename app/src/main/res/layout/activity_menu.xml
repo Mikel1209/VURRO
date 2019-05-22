@@ -106,7 +106,7 @@
 
     <ImageButton
         android:id="@+id/imgbVURRO"
-        android:layout_width="241dp"
+        android:layout_width="234dp"
         android:layout_height="125dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
